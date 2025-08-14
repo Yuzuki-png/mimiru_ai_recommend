@@ -128,4 +128,4 @@ NestJS APIと同一タスクでサイドカーパターン実行
 ### 監視
 - ヘルスチェック: `/health`
 - ログ: CloudWatch Logs
-- メトリクス: ECS標準メトリクス
+- メトリクス: ECS標準メトリクス# mimiru_ai_recommend
