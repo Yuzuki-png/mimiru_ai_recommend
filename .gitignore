@@ -1,0 +1,36 @@
+# 環境変数
+.env
+.env.*
+!.env.example
+
+# バイナリ
+mimiru-ai
+recommendation
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+vendor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ログ
+*.log
+
+# テンポラリファイル
+tmp/
+temp/
