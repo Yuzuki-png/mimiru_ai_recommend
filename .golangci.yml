@@ -1,0 +1,64 @@
+run:
+  timeout: 5m
+  skip-dirs:
+    - vendor
+    - .git
+    - .github
+
+linters:
+  enable:
+    - gofmt
+    - govet
+    - errcheck
+    - staticcheck
+    - gosimple
+    - ineffassign
+    - unused
+    - gosec
+    - gocyclo
+    - dupl
+    - misspell
+    - lll
+    - nakedret
+    - prealloc
+    - exportloopref
+    - gocritic
+    - goimports
+    - revive
+    - unconvert
+    - unparam
+
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    check-blank: true
+  govet:
+    check-shadowing: true
+  gocyclo:
+    min-complexity: 15
+  dupl:
+    threshold: 100
+  lll:
+    line-length: 120
+    tab-width: 1
+  nakedret:
+    max-func-lines: 30
+  gocritic:
+    enabled-tags:
+      - diagnostic
+      - experimental
+      - opinionated
+      - performance
+      - style
+
+issues:
+  exclude-rules:
+    - path: _test\.go
+      linters:
+        - gocyclo
+        - errcheck
+        - dupl
+        - gosec
+    - linters:
+        - lll
+      source: "^//go:generate "
